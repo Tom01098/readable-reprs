@@ -11,6 +11,7 @@ dynamic = ["version"]
 
 [dependency-groups]
 dev = [
+    "cyclonedx-bom>=7.2.1",
     "pytest>=9.0.2",
     "ruff>=0.14.10",
 ]
@@ -21,6 +22,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.version]
 source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+sbom-files = ["bom.json"]
 
 [tool.pytest.ini_options]
 pythonpath = [
