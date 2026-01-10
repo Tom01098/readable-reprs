@@ -25,6 +25,9 @@ build-backend = "hatchling.build"
 [tool.hatch.version]
 source = "vcs"
 
+[tool.hatch.build]
+artifacts = ["bom.json"]
+
 [tool.hatch.build.targets.wheel]
 sbom-files = ["bom.json"]
 

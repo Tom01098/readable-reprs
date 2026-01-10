@@ -12,3 +12,6 @@ wheels/
 
 # JetBrains
 .idea/
+
+# Packaging.
+bom.json
