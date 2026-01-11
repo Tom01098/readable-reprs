@@ -9,6 +9,11 @@ license-files = [
 requires-python = ">=3.8"
 dynamic = ["version"]
 
+[project.urls]
+homepage = "https://github.com/Tom01098/readable-reprs"
+source = "https://github.com/Tom01098/readable-reprs"
+changelog = "https://github.com/Tom01098/readable-reprs/blob/main/CHANGELOG.md"
+
 [dependency-groups]
 dev = [
     "cyclonedx-bom>=5.5.0",
