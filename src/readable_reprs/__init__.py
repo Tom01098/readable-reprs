@@ -1,4 +1,5 @@
 from enum import Enum
+from functools import wraps
 
 
 def patch_reprs() -> None:
@@ -15,4 +16,8 @@ def patch_reprs() -> None:
 
 
 def _patch_enum() -> None:
-    Enum.__repr__ = lambda self: f"{self.__class__.__name__}.{self.name}"
+    @wraps(Enum.__repr__)
+    def patched_repr(self):
+        return f"{self.__class__.__name__}.{self.name}"
+
+    Enum.__repr__ = patched_repr

@@ -19,3 +19,9 @@ class Flags(Enum):
 
 def test_int_enum() -> None:
     assert repr(Flags.FAULT) == "Flags.FAULT"
+
+
+def test_enum_introspection() -> None:
+    assert Flags.__repr__.__name__ == "__repr__"
+    assert Flags.__repr__.__qualname__ == "Enum.__repr__"
+    assert Flags.__repr__.__module__ == "enum"
